@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.7)  8 NOV 2015 07:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.7)  25 NOV 2015 10:24
 entering extended mode
 **paper.tex
 (paper.tex
@@ -93,15 +93,15 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 51.
 
-Overfull \hbox (3.36162pt too wide) in paragraph at lines 84--85
+Overfull \hbox (3.36162pt too wide) in paragraph at lines 78--79
 \OT1/cmr/m/n/10 Fast Fourier Trans-form, Dis-crete Fourier Trans-form, Discrete
 -time Fourier Trans-
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 99.
+(Font)              <7> on input line 93.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 99.
+(Font)              <5> on input line 93.
 [1
 
 {C:/Users/jacob/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
@@ -113,7 +113,7 @@ Here is how much of TeX's memory you used:
  4568 multiletter control sequences out of 15000+200000
  9317 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,9n,19p,246b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,9n,19p,334b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
@@ -134,7 +134,7 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on paper.pdf (4 pages, 221107 bytes).
+Output written on paper.pdf (4 pages, 220952 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

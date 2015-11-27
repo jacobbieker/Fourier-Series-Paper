@@ -78,7 +78,7 @@ a way to make analysis of physical systems easier.
      Fast Fourier Transform, Discrete Fourier Transform, Discrete-time Fourier Transform, Z Transform, Convolution
      
 \subsection{Fast Fourier Transformations}
-The Fast Fourier Transform is a way of transforming a function of time into a function of frequency. It is useful when studying time-dependent phenomena.
+The Fast Fourier Transform is a way of transforming a function of time into a function of frequency. It is useful when studying time-dependent phenomena. In comparison to the Discrete Fourier Transform described below, which takes $$O(n^2)$$ computational steps, the Fast Fourier Transform can be computed in $$O(nlog(n))$$ time, a considerable speedup when $n$ becomes large.
 \subsection{Discrete-Time Fourier Transform}
 \begin{definition}
 	The {\em Discrete-time Fourier Transform (DTFT)} can be defined as:
@@ -88,39 +88,6 @@ The Fast Fourier Transform is a way of transforming a function of time into a fu
 \subsection{Discrete Fourier Transformation}
 Differing from the Discrete-time Fourier Transform in that both the input and the output functions are both finite.
 \subsection{Convolution}
-
-\begin{definition}
-     A {\em semi-quaver} is defined to be half a quaver.
-\end{definition}
-
-If that definition is not enough, here is another:
-
-\begin{definition}
-    The {\em order} of a note $n$ in a quaver $Q$,
-    $O(n,Q)$, is defined by the equation
-         $$ O(n,Q) = \int_{0}^{\infty} \sin(n^{2} t)/(1-Qn) dt. $$
-\end{definition}
-
-Some equations one writes inline, such as
-{\em Pythagoras' Theorem,}
-$c^{2} = a^{2} + b^{2}$,
-while others are better off as displayed
-equations, like the quadratic formula,
-  $$x = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}$$
-which solves the quadratic $ax^{2} + bx + c = 0$. If the quadratic
-formula is written inline,
-  $x = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}$,
-it is readable but not very nice.
-This form,
-  $x = (-b \pm \sqrt{b^{2} - 4ac})/2a$,
-is harder to read as a fraction, but better because of the larger type.
-
-Every inline equation must be part of a sentence:  Since $x < 1/2$ we have
-$x + y < x + 1/2$.  Inline fractions, such as $x < \frac{1}{2}$, are discouraged but
-not prohibited.
-
-
-You can use formulae in theorems, as in the following.
 
 \begin{theorem}\label{ContThrm}
     If $f(x)$ is defined by the equation
@@ -133,54 +100,6 @@ You can use formulae in theorems, as in the following.
    Then $f(x)$ is continuous at $x=0$.
 \end{theorem}
 
-
-\begin{proof}
-    Since
-          $\lim_{x \rightarrow 0^{-}} f(x) =
-           \lim_{x \rightarrow 0^{-}} -x^{2} = 0$
-    and
-          $\lim_{x \rightarrow 0^{+}} f(x) =
-           \lim_{x \rightarrow 0^{+}} x^{2} = 0$
-    it follows that
-         $\lim_{x \rightarrow 0} f(x) = 0 = f(x)$,
-         as required.
-\end{proof}
-
-
-
-
-
-   Did you notice the grammatical error in
-   Theorem~\ref{ContThrm}?  The sentence leading
-   into equation~\ref{SplitFunc} is never completed.
-   %%%% Notice references are done with \ref
-   %%%% you can label any structure that produces a number
-   The following
-   theorem is worded correctly.
-\begin{theorem}
-    If $f(x)$ is defined by the equation
-    \begin{equation}
-         f(x) = \left\{ \begin{array}{rl}
-                          x^{2}, & \mbox{~for $x \geq 0$} \\
-                         -x^{2}, & \mbox{~for $x < 0$}
-                         \end{array}\right.,
-   \end{equation}
-   then $f(x)$ is continuous at $x=0$.
-\end{theorem}
-
-   One rule of thumb of mathematical composition is to
-   use mathematical notation inside sentences only for
-   nouns.  For example, one writes that ``$R$ is the the
-   radius of a circle'', but not that ``the radius of the
-   circle ='s the side length of the square''.  According to
-   this rule it is correct to write that
-   ``$(x>0) \Rightarrow (x^{3} > 0)$'' since the double arrow is part of
-   an equation, but not to write
-   ``$x$ is positive $\Rightarrow$ $x^{3}$ is positive'', since the
-   double arrow is acting as a verb.
-
-Here is another kind of common structure:
-
 \begin{theorem}
    The following are equivalent.
    \begin{enumerate}
@@ -189,45 +108,6 @@ Here is another kind of common structure:
       \item $a = b$ or $a<b$
    \end{enumerate}
 \end{theorem}
-
-And here is a typical matrix
- $$
- \left[
- \begin{array}{rrrrrrrr}
-    0 & -1 & 0 & 1 & 0 & 0 & 0 & 0  \\
-    1 & 0 & 0 & 0 & -1 & 0 & 0 & 0  \\
-    0 & 0 & \alpha & \alpha & -\alpha & -\alpha & 0 & 0  \\
-    \alpha & \alpha & 0 & 0 & 0 & 0 & -\alpha & -\alpha  \\
-    0 & 0 & 1 & 0 & 0 & 0 & -1 & 0  \\
-    0 & 0 & 0 & 0 & 0 & 1 & 0 & -1
- \end{array}
- \right]
- $$
-
-For instance in Figure~\ref{ParabFig} the picture of the
-parabola was produced in Maple
-and saved as an epsf (eps) file, (pure ascii mode, no
-preview, no thumbnail).
-  \begin{figure}[htb]
-      \centering
-      \caption{$y = x^{2}$\label{ParabFig}}
-  \end{figure}
-When the document is processed, the .eps file must reside
-in the same directory as the .tex file.  Also, the command
-\verb2\usepackage{graphicx}2 should occur near the top of the document.
-Notice that this figure has been scaled so that the overall size
-is convenient (width 2.5 inches), but now the text is far too small.
-To avoid this problem it is often best to
-generate a figure which is approximately the same size as
-it will appear in the document.
-
-A complete source of information on writing documents
-in \LaTeX is~\cite{MyFavorite}.  (Look in the source
-so see how to produce that citation.)
-Last of all is the style of the $\Pi$ME biliography:
-Author's names in small caps, journal article titles
-uncapitalized and in italics, book titles capitalized
-and in quotes.
 
 \section{Applications of Fourier Series}
 It is used in proving the Nyquist-Shannon sampling theorem,

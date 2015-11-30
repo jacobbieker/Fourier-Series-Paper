@@ -101,26 +101,6 @@ There are multiple different Fast Fourier Transform algorithms, including the Co
 Differing from the Discrete-time Fourier Transform in that both the input and the output functions are both finite.
 \subsection{Convolution}
 
-\begin{theorem}\label{ContThrm}
-    If $f(x)$ is defined by the equation
-    \begin{equation}\label{SplitFunc}
-         f(x) = \left\{ \begin{array}{rl}
-                          x^{2}, & \mbox{~for $x \geq 0$.} \\
-                         -x^{2}, & \mbox{~for $x < 0$}
-                         \end{array} \right.
-   \end{equation}
-   Then $f(x)$ is continuous at $x=0$.
-\end{theorem}
-
-\begin{theorem}
-   The following are equivalent.
-   \begin{enumerate}
-      \item $a \leq b$
-      \item $b \geq a$
-      \item $a = b$ or $a<b$
-   \end{enumerate}
-\end{theorem}
-
 \section{Applications of Fourier Series}
 It is used in proving the Nyquist-Shannon sampling theorem,
 studying harmonic oscillations, waveforms, signal processing,
@@ -142,6 +122,10 @@ As part of research I am conducting with Dr. James Imamura, where we simulate st
 It is also used in the calculation of Rossby Wave Instabilities.
 \subsection{Heat Equation}
 Solving the heat equation was one of the first applications of the Fourier series, and is what Joseph Fourier proposed when first coming up with the Fourier series.
+
+For example, to solve for the heat distribution on a metal square plate, whose three sides, of length $\pi$, are kept at 0 Celsius and one side is heated and kept at a temperature $x$, then the Fourier 
+
+$$T(x,y) = 2\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} \sin(nx) {\sinh(ny) \over \sinh(n\pi)}$$
 
 \subsection{Quantum Physics}
 In quantum physics, the Fourier transform can be used with wavefunctions, as well as with the uncertainty principle to show that completely knowing the momentum of a particle means that the location is completely unknown, as well as the opposite. 

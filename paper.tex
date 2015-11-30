@@ -74,16 +74,22 @@ Fourier series are expansions of periodic functions in terms of an infinite sum 
 It is a way to describe functions in a combination of simpler functions and
 a way to make analysis of physical systems easier.
 
+Fourier Series generally take the form of 
+
+$$s(x) &= \frac{a_0}{2} + \sum_{n=1}^\infty \left[a_n\cos\left(nx\right)+b_n\sin\left(nx\right)\right]$$
+
+For odd functions $a_n$ becomes zero and the Fourier series becomes composed of only sine functions, while if the function is even, $b_n$ becomes zero and the Fourier series becomes composed of only cosine functions. 
 \section{Methods of Studying Fourier Series}\label{Description}
      There are multiple methods to studying Fourier Series, including the Fast Fourier Transform, Discrete-Time Fourier Transform, the Discrete Fourier Transform, and the Convolution.
      
 \subsection{Fast Fourier Transformations}
 The Fast Fourier Transform is a way of transforming a function of time into a function of frequency. It is useful when studying time-dependent phenomena. In comparison to the Discrete Fourier Transform described below, which takes $$O(n^2)$$ computational steps, the Fast Fourier Transform can be computed in $$O(nlog(n))$$ time, a considerable speedup when $n$ becomes large.
+
+There are multiple different Fast Fourier Transform algorithms, including the Cooley-Tukey algorithm, among others. The Cooley-Tukey algorithm, named after J.W. Cooley of IBM and John Tukey of Princeton, breaks the Discrete Fourier Transform into smaller Discrete Fourier Transforms of arbitrary size recursively.
 \subsection{Discrete-Time Fourier Transform}
 \begin{definition}
 	The {\em Discrete-time Fourier Transform (DTFT)} can be defined as:
-	$$X_{1/T}(f) = \mathcal{F}\left \{\sum_{n=-\infty}^{\infty} x[n] \cdot \delta(t-nT)\right \
-	$$
+	$$X_{1/T}(f) = \mathcal{F}\left \{\sum_{n=-\infty}^{\infty} x[n] \cdot \delta(t-nT)\right$$
 \end{definition}
 \subsection{Discrete Fourier Transformation}
 Differing from the Discrete-time Fourier Transform in that both the input and the output functions are both finite.

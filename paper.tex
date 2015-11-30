@@ -79,6 +79,12 @@ Fourier Series generally take the form of
 $$s(x) &= \frac{a_0}{2} + \sum_{n=1}^\infty \left[a_n\cos\left(nx\right)+b_n\sin\left(nx\right)\right]$$
 
 For odd functions $a_n$ becomes zero and the Fourier series becomes composed of only sine functions, while if the function is even, $b_n$ becomes zero and the Fourier series becomes composed of only cosine functions. 
+
+In general,
+$$a_n &{} = \frac{1}{\pi}\int_{-\pi}^{\pi}s(x) \cos(nx)\,dx$$
+and
+$$b_n &{} = \frac{1}{\pi}\int_{-\pi}^{\pi}s(x) \sin(nx)\, dx$$
+where $\quad n \ge 0$, and $s(x)$ is the function being described by the Fourier Series.
 \section{Methods of Studying Fourier Series}\label{Description}
      There are multiple methods to studying Fourier Series, including the Fast Fourier Transform, Discrete-Time Fourier Transform, the Discrete Fourier Transform, and the Convolution.
      

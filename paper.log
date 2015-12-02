@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.7)  2 DEC 2015 12:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.7)  2 DEC 2015 12:25
 entering extended mode
 **paper.tex
 (paper.tex
@@ -107,10 +107,10 @@ clud-ing the Fast Fourier
 {C:/Users/jacob/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
 [3] [4] [5] [6] (paper.aux) ) 
 Here is how much of TeX's memory you used:
- 1175 strings out of 493673
- 15143 string characters out of 3141530
- 70556 words of memory out of 3000000
- 4565 multiletter control sequences out of 15000+200000
+ 1176 strings out of 493673
+ 15153 string characters out of 3141530
+ 70560 words of memory out of 3000000
+ 4566 multiletter control sequences out of 15000+200000
  8241 words of font info for 29 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,6n,19p,554b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -128,7 +128,7 @@ b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on paper.pdf (6 pages, 171280 bytes).
+Output written on paper.pdf (6 pages, 172219 bytes).
 PDF statistics:
  77 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

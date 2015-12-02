@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.7)  1 DEC 2015 21:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.7)  2 DEC 2015 07:13
 entering extended mode
 **paper.tex
 (paper.tex
@@ -97,37 +97,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 77.
 
-! Misplaced alignment tab character &.
-l.77 $$s(x) &
-             = \frac{a_0}{2} + \sum_{n=1}^\infty \left[a_n\cos\left(nx\right...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.82 $$a_n &
-            {} = \frac{1}{\pi}\int_{-\pi}^{\pi}s(x) \cos(nx)\,dx$$
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.84 $$b_n &
-            {} = \frac{1}{\pi}\int_{-\pi}^{\pi}s(x) \sin(nx)\, dx$$
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
 Overfull \hbox (0.77838pt too wide) in paragraph at lines 87--88
 \OT1/cmr/m/n/10 There are mul-ti-ple meth-ods to study-ing Fourier Se-ries, in-
 clud-ing the Fast Fourier
@@ -172,7 +141,7 @@ mr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5
 ><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on paper.pdf (6 pages, 185222 bytes).
+Output written on paper.pdf (6 pages, 185304 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

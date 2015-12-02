@@ -89,21 +89,21 @@ There are multiple methods to studying Fourier Series, including the Fast Fourie
 \subsection{Fast Fourier Transformations}
 The Fast Fourier Transform is a way of transforming a function of time into a function of frequency. It is useful when studying time-dependent phenomena. In comparison to the Discrete Fourier Transform described below, which takes $O(n^2)$ computational steps, the Fast Fourier Transform can be computed in $O(nlog(n))$ time, a considerable speedup when $n$ becomes large.
 
-There are multiple different Fast Fourier Transform algorithms, including the Cooley-Tukey algorithm, among others. The Cooley-Tukey algorithm, named after J.W. Cooley of IBM and John Tukey of Princeton, breaks the Discrete Fourier Transform into smaller Discrete Fourier Transforms of arbitrary size recursively.
+There are multiple different Fast Fourier Transform algorithms, including the Cooley-Tukey algorithm, among others. The Cooley-Tukey algorithm, named after J.W. Cooley of IBM and John Tukey of Princeton, breaks the Discrete Fourier Transform into smaller Discrete Fourier Transforms of arbitrary size recursively.\cite{WikiFFT}
 \subsection{Discrete-Time Fourier Transform}
 \begin{definition}
 	The {\em Discrete-time Fourier Transform (DTFT)} can be defined as:
 	$$X_{2\pi}(\omega) = \sum_{n=-\infty}^{\infty} x[n] \,e^{-i \omega n}$$
-	where $x[n]$ is the set of all discrete real and complex numbers for integer $n$, and $\omega$ is the frequency variable with normalized units of radians/sample.
+	where $x[n]$ is the set of all discrete real and complex numbers for integer $n$, and $\omega$ is the frequency variable with normalized units of radians/sample.\cite{UBC}
 \end{definition}
 
 Discrete-time Fourier Transforms are useful in that its inverse is the original data sequence.
 \subsection{Discrete Fourier Transformation}
 The Discrete Fourier Transform differs from the Discrete-time Fourier Transform in that both the input and the output functions are both finite. For example
-$$S_N[k] =\frac{1}{NT} \underbrace{\sum_N s_N[n]\cdot e^{-i 2\pi \frac{k}{N} n}}_{S_k}$$
+$$S_N[k] =\frac{1}{NT} \sum_N s_N[n]\cdot e^{-i 2\pi \frac{k}{N} n}$$
 \subsection{Convolution}
 \begin{theorem}
-	The Convolution Theorem states that, under suitable conditions, the Fourier transform of a convolution is equal to the pointwise product of Fourier transforms.
+	The Convolution Theorem states that, under suitable conditions, the Fourier transform of a convolution is equal to the pointwise product of Fourier transforms.\cite{Convolution}
 \end{theorem}
 
 For example, if $f$ and $g$ are two different functions with the convolution of $f*g$, and the Fourier transforms of $f$ and $g$ are defined as $\mathcal{F}(f)$ and $\mathcal{F}(g)$ respectively, then the following is true
@@ -114,7 +114,7 @@ and so is
 
 $$\mathcal{F}\{f\} \cdot \mathcal{F}\{g\} = \mathcal{F}\{f*g\}$$
 
-The caveat is that, depending on how the Fourier transforms are normalized, there might be a constant scaling factor that appears in the above. 
+The caveat is that, depending on how the Fourier transforms are normalized, there might be a constant scaling factor that appears in the above. \cite{Convolution}
 
 The Convolution Theorem is exceedingly useful in creating programs and computers to solve convolutions, as the time complexity can be reduced from $O(n^4)$ to $O(nlogn)$.
 
@@ -128,7 +128,7 @@ solving the heat equation.
 
 \subsection{Nyquist-Shannon Sampling Theorem}
 \begin{theorem}
-	If a time-varying signal is periodically sampled at a rate of at least twice the frequency of the highest sinusoidal component contained within the signal, then the original time-varying signal can be exactly recovered from the periodic samples.
+	If a time-varying signal is periodically sampled at a rate of at least twice the frequency of the highest sinusoidal component contained within the signal, then the original time-varying signal can be exactly recovered from the periodic samples.\cite{Nyquist}
 \end{theorem}
 The theorem explains why aliasing occurs when the sampling rate is too low, so that the sample's higher frequencies are not properly accounted for and instead masquerade as a different frequency.
 \subsection{Signal Processing}
@@ -140,10 +140,6 @@ It is also used in the calculation of Rossby Wave Instabilities. The instabiliti
 \subsection{Heat Equation}
 Solving the heat equation was one of the first applications of the Fourier series, and is what Joseph Fourier proposed when first coming up with the Fourier series.
 
-For example, to solve for the heat distribution on a metal square plate, whose three sides, of length $\pi$, are kept at 0 Celsius and one side is heated and kept at a temperature $x$, then the Fourier 
-
-$$T(x,y) = 2\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} \sin(nx) {\sinh(ny) \over \sinh(n\pi)}$$
-
 \subsection{Quantum Physics}
 In quantum physics, the Fourier transform can be used with wavefunctions, as well as with the uncertainty principle to show that completely knowing the momentum of a particle means that the location is completely unknown, as well as the opposite. For example, by describing the physical state of a particle, such as its momentum $p$, and position, $q$, the set of possible states of the particle can be described by the Fourier transform of 
 
@@ -151,20 +147,27 @@ $$\phi(p) = \int \psi (q) e^{2\pi i pq\over h} dq$$
 
 This Fourier transformation allows for changing between different ways of representing the state of a particle, such as between momentum and position, in a simple manner. 
 
-The Fourier transform is equivalent to splitting light into its component spectrum. It is also used to understand phenomena in optics and with light, such as Young's double slit experiment. For the double slit experiment, the Fourier transform of the transmission function gives the frequency content of the resultant wave, while the square of the Fourier transform gives the intensity of the pattern on the screen. The transform then describes the maxima and minima that occur from the double slit experiment correctly.
+The Fourier transform is equivalent to splitting light into its component spectrum. It is also used to understand phenomena in optics and with light, such as Young's double slit experiment. For the double slit experiment, the Fourier transform of the transmission function gives the frequency content of the resultant wave, while the square of the Fourier transform gives the intensity of the pattern on the screen. The transform then describes the maxima and minima that occur from the double slit experiment correctly.\cite{Optics}
 
 \begin{thebibliography}{9}
-     \bibitem{MyFavorite}
-         {\sc Lamport, L.,}
-         ``\LaTeX - A Document Preparation System'',
-         Addison-Wesley, 1998.
 
-    \bibitem{BobsPaper}
-         {\sc Fillioque R.} and {\sc Heliotrope, B.,}
-         {\em Why Fermat's last theorem is really a lemma,}
-         American Mathematical Weekly,
-         Vol. 7, No. 1, pp 115-116, 1998.
+	\bibitem{UBC}Feldman, Joel. "Discrete-time Fourier Transform and Fourier Series." University of British Columbia, 21 Mar. 2007. Web. 2 Dec. 2015.
 
+	\bibitem{Nyquist}"Nyquist Sampling Theorem." Portland Community College, n.d. Web. 2 Dec. 2015.
+
+	\bibitem{Aliasing}Olshausen, Bruno A. "Aliasing." Aliasing. Berkeley, 10 Oct. 2000. Web. 2 Dec. 2015.
+
+	\bibitem{Optics}"Optics And Fourier Transform." Optics. Berkeley, n.d. Web. 02 Dec. 2015.
+	
+	\bibitem{Convolution}"Convolution Theorem." Wikipedia. Wikimedia Foundation, n.d. Web. 02 Dec. 2015.
+	
+	\bibitem{WikiDTFT}"Discrete Time Fourier Transform." Wikipedia. Wikimedia Foundation, n.d. Web. 02 Dec. 2015.
+	
+	\bibitem{WikiFFT}"Fast Fourier Transform." Wikipedia. Wikimedia Foundation, n.d. Web. 02 Dec. 2015.
+	
+	\bibitem{WikiFourier}"Fourier Analysis." Wikipedia. Wikimedia Foundation, n.d. Web. 02 Dec. 2015.
+	
+	\bibitem{WikiTransform}"Fourier Transform." Wikipedia. Wikimedia Foundation, n.d. Web. 02 Dec. 2015.
 \end{thebibliography}
 
 \end{document}

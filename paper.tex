@@ -93,10 +93,13 @@ There are multiple different Fast Fourier Transform algorithms, including the Co
 \subsection{Discrete-Time Fourier Transform}
 \begin{definition}
 	The {\em Discrete-time Fourier Transform (DTFT)} can be defined as:
-	$$X_{1/T}(f) = \mathcal{F}\left \{\sum_{n=-\infty}^{\infty} x[n] \cdot \delta(t-nT)\right$$
+	$$X_{2\pi}(\omega) = \sum_{n=-\infty}^{\infty} x[n] \,e^{-i \omega n}$$
+	where $x[n]$ is the set of all discrete real and complex numbers for integer $n$, and $\omega$ is the frequency variable with normalized units of radians/sample.
 \end{definition}
+
+Discrete-time Fourier Transforms are useful in that its inverse is the original data sequence.
 \subsection{Discrete Fourier Transformation}
-Differing from the Discrete-time Fourier Transform in that both the input and the output functions are both finite. For example
+The Discrete Fourier Transform differs from the Discrete-time Fourier Transform in that both the input and the output functions are both finite. For example
 $$S_N[k] =\frac{1}{NT} \underbrace{\sum_N s_N[n]\cdot e^{-i 2\pi \frac{k}{N} n}}_{S_k}$$
 \subsection{Convolution}
 \begin{theorem}

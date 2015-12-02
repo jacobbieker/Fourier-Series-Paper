@@ -82,12 +82,12 @@ In general,
 $$a_n {} = \frac{1}{\pi}\int_{-\pi}^{\pi}s(x) \cos(nx)\,dx$$
 and
 $$b_n {} = \frac{1}{\pi}\int_{-\pi}^{\pi}s(x) \sin(nx)\, dx$$
-where $\quad n \ge 0$, and $s(x)$ is the function being described by the Fourier Series.
+where $\quad n \ge 0$, and $s(x)$ is the function being described by the Fourier Series.\cite{WikiFourier}
 \section{Methods of Studying Fourier Series}\label{Description}
 There are multiple methods to studying Fourier Series, including the Fast Fourier Transform, Discrete-Time Fourier Transform, the Discrete Fourier Transform, and convolving the transformations.
      
 \subsection{Fast Fourier Transformations}
-The Fast Fourier Transform is a way of transforming a function of time into a function of frequency. It is useful when studying time-dependent phenomena. In comparison to the Discrete Fourier Transform described below, which takes $O(n^2)$ computational steps, the Fast Fourier Transform can be computed in $O(nlog(n))$ time, a considerable speedup when $n$ becomes large.
+The Fast Fourier Transform is a way of transforming a function of time into a function of frequency. It is useful when studying time-dependent phenomena. In comparison to the Discrete Fourier Transform described below, which takes $O(n^2)$ computational steps, the Fast Fourier Transform can be computed in $O(nlog(n))$ time, a considerable speedup when $n$ becomes large.\cite{WikiFFT}
 
 There are multiple different Fast Fourier Transform algorithms, including the Cooley-Tukey algorithm, among others. The Cooley-Tukey algorithm, named after J.W. Cooley of IBM and John Tukey of Princeton, breaks the Discrete Fourier Transform into smaller Discrete Fourier Transforms of arbitrary size recursively.\cite{WikiFFT}
 \subsection{Discrete-Time Fourier Transform}

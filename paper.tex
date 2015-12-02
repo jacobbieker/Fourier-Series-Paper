@@ -34,7 +34,7 @@
 \newenvironment{proof}{{\sc Proof:}}{~\hfill QED}
 \newenvironment{AMS}{}{}
 \newenvironment{keywords}{}{}
-\renewcommand{\baselinestretch}{1.5} 
+\renewcommand{\baselinestretch}{1.6} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %   The first thanks indicates your affiliation
 % %
@@ -53,9 +53,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % abstract, keywords and Subject classification are optional.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{abstract}
-    This is the project for Differential Equations.
-\end{abstract}
 
 % Most people don't use these, so they are "commented out"
 % by starting the lines with a "%"
@@ -99,7 +96,8 @@ There are multiple different Fast Fourier Transform algorithms, including the Co
 	$$X_{1/T}(f) = \mathcal{F}\left \{\sum_{n=-\infty}^{\infty} x[n] \cdot \delta(t-nT)\right$$
 \end{definition}
 \subsection{Discrete Fourier Transformation}
-Differing from the Discrete-time Fourier Transform in that both the input and the output functions are both finite.
+Differing from the Discrete-time Fourier Transform in that both the input and the output functions are both finite. For example
+$$S_N[k] =\frac{1}{NT} \underbrace{\sum_N s_N[n]\cdot e^{-i 2\pi \frac{k}{N} n}}_{S_k}$$
 \subsection{Convolution}
 
 \section{Applications of Fourier Series}
@@ -114,13 +112,13 @@ solving the heat equation.
 \begin{theorem}
 	If a time-varying signal is periodically sampled at a rate of at least twice the frequency of the highest sinusoidal component contained within the signal, then the original time-varying signal can be exactly recovered from the periodic samples.
 \end{theorem}
-The theorem also explains why aliasing occurs if the discrete sampling frequency is not sufficiently high enough to capture all the changes in the signal. 
-Fourier series comes into play in this theorem through breaking a signal into its component frequencies.
+The theorem explains why aliasing occurs in two different situations: oversampling and undersampling.  in signal sampling if the discrete sampling frequency is not sufficiently high enough to capture all the changes in the signal.
 \subsection{Signal Processing}
 In signal processing, the Fourier series, and especially the Fourier transform, is used to determine what frequencies are present in a signal, and in what proportions. The magnitude squared of the Fourier series of a given signal gives the amount of power the signal has at that particular frequency. The Fourier series also makes it easier for specific frequencies present in a signal to be blocked out, or nullified.
 \subsection{Astrophysical Simulations}
 As part of research I am conducting with Dr. James Imamura, where we simulate stars as they accumulate mass and become unstable, the Fourier series coefficients are graphed and examined to see how the simulation is going. As the star becomes more unstable, the first few terms grow larger and fluctuate more dramatically.
-It is also used in the calculation of Rossby Wave Instabilities.
+
+It is also used in the calculation of Rossby Wave Instabilities. The instabilities appear in rotating disks and are potentially one avenue of planetary formation. Fourier series come into play
 \subsection{Heat Equation}
 Solving the heat equation was one of the first applications of the Fourier series, and is what Joseph Fourier proposed when first coming up with the Fourier series.
 

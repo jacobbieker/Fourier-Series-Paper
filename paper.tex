@@ -127,7 +127,11 @@ For example, to solve for the heat distribution on a metal square plate, whose t
 $$T(x,y) = 2\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} \sin(nx) {\sinh(ny) \over \sinh(n\pi)}$$
 
 \subsection{Quantum Physics}
-In quantum physics, the Fourier transform can be used with wavefunctions, as well as with the uncertainty principle to show that completely knowing the momentum of a particle means that the location is completely unknown, as well as the opposite. 
+In quantum physics, the Fourier transform can be used with wavefunctions, as well as with the uncertainty principle to show that completely knowing the momentum of a particle means that the location is completely unknown, as well as the opposite. For example, by describing the physical state of a particle, such as its momentum $p$, and position, $q$, the set of possible states of the particle can be described by the Fourier transform of 
+
+$$\phi(p) = \int \psi (q) e^{2\pi i pq\over h} dq$$
+
+This Fourier transformation allows for changing between different ways of representing the state of a particle, such as between momentum and position, in a simple manner. 
 
 The Fourier transform is equivalent to splitting light into its component spectrum. It is also used to understand phenomena in optics and with light, such as Young's double slit experiment. For the double slit experiment, the Fourier transform of the transmission function gives the frequency content of the resultant wave, while the square of the Fourier transform gives the intensity of the pattern on the screen. The transform then describes the maxima and minima that occur from the double slit experiment correctly.
 

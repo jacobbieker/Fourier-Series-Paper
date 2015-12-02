@@ -100,10 +100,10 @@ There are multiple different Fast Fourier Transform algorithms, including the Co
 Discrete-time Fourier Transforms are useful in that its inverse is the original data sequence.
 \subsection{Discrete Fourier Transformation}
 \begin{definition}
-	Given $n$ real or complex inputs $x_{0}...x_{n-1}$, the Discrete Fourier Transform is defined as $$y_{k} = \sum_ $$
+	Given $n$ real or complex inputs $x_{0}...x_{n-1}$, the Discrete Fourier Transform is defined as $$y_{k} = \sum_{0\leq l < n} \omega_n^{kl}x_l, 0 \leq k < n $$, 
+	where $\omega_n = e^{\frac{-2i\pi}{n}}$.\cite{CarnegieFFT}
 \end{definition}
-The Discrete Fourier Transform differs from the Discrete-time Fourier Transform in that both the input and the output functions are both finite. For example
-$$S_N[k] =\frac{1}{NT} \sum_N s_N[n]\cdot e^{-i 2\pi \frac{k}{N} n}$$
+The Discrete Fourier Transform differs from the Discrete-time Fourier Transform in that both the input and the output functions are both finite.
 
 
 \subsection{Convolution}

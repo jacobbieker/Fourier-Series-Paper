@@ -84,7 +84,7 @@ and
 $$b_n &{} = \frac{1}{\pi}\int_{-\pi}^{\pi}s(x) \sin(nx)\, dx$$
 where $\quad n \ge 0$, and $s(x)$ is the function being described by the Fourier Series.
 \section{Methods of Studying Fourier Series}\label{Description}
-     There are multiple methods to studying Fourier Series, including the Fast Fourier Transform, Discrete-Time Fourier Transform, the Discrete Fourier Transform, and the Convolution.
+     There are multiple methods to studying Fourier Series, including the Fast Fourier Transform, Discrete-Time Fourier Transform, the Discrete Fourier Transform, and convolving the transformations.
      
 \subsection{Fast Fourier Transformations}
 The Fast Fourier Transform is a way of transforming a function of time into a function of frequency. It is useful when studying time-dependent phenomena. In comparison to the Discrete Fourier Transform described below, which takes $$O(n^2)$$ computational steps, the Fast Fourier Transform can be computed in $$O(nlog(n))$$ time, a considerable speedup when $n$ becomes large.
@@ -99,12 +99,27 @@ There are multiple different Fast Fourier Transform algorithms, including the Co
 Differing from the Discrete-time Fourier Transform in that both the input and the output functions are both finite. For example
 $$S_N[k] =\frac{1}{NT} \underbrace{\sum_N s_N[n]\cdot e^{-i 2\pi \frac{k}{N} n}}_{S_k}$$
 \subsection{Convolution}
+\begin{theorem}
+	The Convolution Theorem states that, under suitable conditions, the Fourier transform of a convolution is equal to the pointwise product of Fourier transforms.
+\end{theorem}
+
+For example, if $f$ and $g$ are two different functions with the convolution of $f*g$, and the Fourier transforms of $f$ and $g$ are defined as $\mathcal{F}(f)$ and $\mathcal{F}(g)$ respectively, then the following is true
+
+$$\mathcal{F}\{f*g\} = \mathcal{F}\{f\} \cdot \mathcal{F}\{g\}$$
+
+and so is 
+
+$$\mathcal{F}\{f\} \cdot \mathcal{F}\{g\} = \mathcal{F}\{f*g\}$$
+
+The caveat is that, depending on how the Fourier transforms are normalized, there might be a constant scaling factor that appears in the above. 
+
+The Convolution Theorem is exceedingly useful in creating programs and computers to solve convolutions, as the time complexity can be reduced from $O(n^4)$ to $O(nlogn)$.
 
 \section{Applications of Fourier Series}
 It is used in proving the Nyquist-Shannon sampling theorem,
 studying harmonic oscillations, waveforms, signal processing,
 diffractions, interference, and Young's double slit experiment,
-and Radiation from surface currents, supernovae simulations,
+and radiation from surface currents, supernovae simulations,
 partial differential equations by separating variables,
 solving the heat equation.
 
@@ -112,7 +127,7 @@ solving the heat equation.
 \begin{theorem}
 	If a time-varying signal is periodically sampled at a rate of at least twice the frequency of the highest sinusoidal component contained within the signal, then the original time-varying signal can be exactly recovered from the periodic samples.
 \end{theorem}
-The theorem explains why aliasing occurs in two different situations: oversampling and undersampling.  in signal sampling if the discrete sampling frequency is not sufficiently high enough to capture all the changes in the signal.
+The theorem explains why aliasing occurs when the sampling rate is too low, so that the sample's higher frequencies are not properly accounted for and instead masquerade as a different frequency.
 \subsection{Signal Processing}
 In signal processing, the Fourier series, and especially the Fourier transform, is used to determine what frequencies are present in a signal, and in what proportions. The magnitude squared of the Fourier series of a given signal gives the amount of power the signal has at that particular frequency. The Fourier series also makes it easier for specific frequencies present in a signal to be blocked out, or nullified.
 \subsection{Astrophysical Simulations}
